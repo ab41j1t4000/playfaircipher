@@ -5,20 +5,12 @@ def findPosition(a,b,matrix):
     z = 0
     for i in range(len(matrix)):
         for j in range(len(matrix[0])):
-            if (len(matrix[i][j])==3):
-                if (a == 'I' or a == 'J'):
-                    w = i
-                    x = j
-                elif (b == 'I' or b == 'J'):
-                    y = i
-                    z = j
-            else:
-                if (matrix[i][j]) == a:
-                    w = i
-                    x = j
-                if (matrix[i][j]) == b:
-                    y = i
-                    z = j
+            if (matrix[i][j]) == a:
+                w = i
+                x = j
+            if (matrix[i][j]) == b:
+                y = i
+                z = j
 
     return w,x,y,z
 
@@ -52,26 +44,9 @@ def createMatrix(cipher):
     while m<5:
         while n<5:
             if chr(a) not in temp:
-                if a == 73:
-                    if chr(74) not in temp:
-                        matrix[m][n] = 'J'
-                        a += 1
-                    else:
-                        matrix[m][n] = 'I'
-                        a += 2
-                    n += 1
-                elif a == 74:
-                    if chr(73) not in temp:
-                        matrix[m][n] = 'I'
-                        a += 2
-                    else:
-                        matrix[m][n] = 'J'
-                        a += 1
-                    n += 1
-                else:
-                    matrix[m][n] = chr(a)
-                    n += 1
-                    a += 1
+                matrix[m][n] = chr(a)
+                n += 1
+                a += 1
             else:
                 a += 1
         n = 0
