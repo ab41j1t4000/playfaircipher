@@ -11,16 +11,17 @@
     <center><h1>PLAYFAIR CIPHER</h1></center><br>
     <center><form action="/" method="post">
         <div class="form-group">
-          <label>Plaintext</label><br>
-          <input type="text" class="form-control"  placeholder="Enter Plaintext" name="plaintext">
+          <label>Plaintext / Ciphertext</label><br>
+          <input type="text" class="form-control"  name="plaintext">
         </div><br>
         <div class="form-group">
-          <label>Ciphertext</label><br>
-          <input type="text" class="form-control" placeholder="Enter Cipher" name="cipher">
+          <label>Cipher</label><br>
+          <input type="text" class="form-control" name="cipher">
         </div>
         <button type="submit" value="Encrypt" name="action">Encrypt</button>
         &emsp14;
-        <button type="submit" value="Decrypt" name="action">Decypt</button><br>
+        <button type="submit" value="Decrypt" name="action">Decypt</button><br><br>
+        <button type="submit" value="Decrypt" name="action">Clear</button><br><br>
         <div class="form-group">
             <label>Output</label><br>
             <textarea cols="50" rows="10" readonly>{{ op }}</textarea>

@@ -54,17 +54,19 @@ def createMatrix(cipher):
             if chr(a) not in temp:
                 if a == 73:
                     if chr(74) not in temp:
-                        matrix[m][n] = 'I/J'
+                        matrix[m][n] = 'J'
+                        a += 1
                     else:
                         matrix[m][n] = 'I'
-                    a += 2
+                        a += 2
                     n += 1
                 elif a == 74:
                     if chr(73) not in temp:
-                        matrix[m][n] = 'I/J'
+                        matrix[m][n] = 'I'
+                        a += 2
                     else:
                         matrix[m][n] = 'J'
-                    a += 1
+                        a += 1
                     n += 1
                 else:
                     matrix[m][n] = chr(a)
